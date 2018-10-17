@@ -1,0 +1,515 @@
+$maincolor:#FF6D00;
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+/* my frame work */
+.capt {
+    text-transform: capitalize;
+}
+
+.upp {
+    text-transform: uppercase;
+}
+.clear-fix {
+    clear: both;
+}
+
+/* start fixed menu */
+.fixed-menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    left: -200px;;
+    background-color: rgb(207, 202, 202);
+    text-align: center;
+    z-index: 99;
+    font-weight: bolder;
+    border-right: 2px solid  rgb(192, 186, 186);
+    img {
+        border-radius: 50%;
+        margin: 70px auto 20px;
+        width: 150px;
+        height: 150px;
+        border: 2px solid #fff;
+    }
+    h6 {
+        margin-bottom: 20px;;
+    }
+    ul {
+        li {
+            padding: 10px 0;
+            border-bottom: 2px solid rgb(192, 186, 186);
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                background-color: $maincolor;
+                color: #fff;
+            }
+            &.active {
+                background-color: $maincolor;
+            }
+        }
+    }
+    .icon{
+        position: absolute;
+        width:40px;
+        height: 40px;
+        line-height: 50px;
+        text-align: center;
+        background-color: rgb(207, 202, 202);
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        border-radius: 0 10px 10px 0;
+        border: 1px solid rgb(192, 186, 186);
+        i {
+            color:  #000;
+            font-size: 25px;
+            cursor: pointer;
+            transition: all .4s ease-in-out;
+            &:hover {
+               color: $maincolor;
+            }
+        }
+    }
+}
+/* start header */
+.header {
+    background-image: url(../images/2.jpg);
+    background-attachment: fixed;
+    background-position-x:right;
+    color:#fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    .over {
+        background-color: $maincolor;
+        height: 100%!important;
+        width: 55%;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        top: 0;
+        -webkit-box-shadow: 30px 5px 60px 5px $maincolor;
+        box-shadow: 30px 5px 60px 5px $maincolor;
+    }
+    .info {
+        padding:150px 100px;
+        position: relative;
+        h5 {
+            margin-bottom: 20px;
+            font-family: 'Pacifico', cursive;
+            }
+        h1 {
+            display: block;
+        }
+        ul {
+            padding: 20px 0;
+            li {
+                display: inline-block;
+                padding-right: 15px;
+                font-size: 25px;
+                transition: all .8s ease-in-out;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.4)
+                }
+                a {
+                    color: #fff;
+                }
+            }
+        }
+
+        .down {
+            position: absolute;
+            font-size: 35px;
+            bottom: 80px;
+            left:45%;
+            cursor: pointer;
+            transition: all .8s ease-in-out;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+    @media(max-width:576px) {
+        .header {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        }
+        .over {
+            width: 100%;
+            background-color: rgba(255, 102, 0, 0.774)
+        }
+        .info {
+            text-align: center;
+            padding: 150px 40px;
+        }
+    }
+    
+    @media(max-width:991px) {
+        .info {
+            text-align: center;
+            padding: 150px 20px;
+        }
+       
+    }
+}
+
+
+/* start about me */
+.about {
+    background-color: #fff;
+    height: auto; 
+    padding: 80px 0 50px;
+    h2{
+    text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+    -webkit-text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+     margin:0 auto  60px;
+     padding-bottom: 15px;
+     border-bottom: 5px solid $maincolor;
+     width: 150px;
+    }
+    .about-me {
+        h5 {
+            color: #777;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #999;
+        }
+        p {
+           padding-top: 20px;
+            line-height: 1.8;
+        }   
+    }
+    .item {
+        margin-top: 35px;
+        padding: 18px 12px;
+        transition:all .6s ease-in-out;
+        i {
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition:all .6s ease-in-out;
+        }
+        .type {
+            font-size: 15px;
+        }
+        p {
+            font-size: 13px;
+        }
+        .email{
+            font-size: 10px;
+        }
+        &:hover{
+            box-shadow: -1px -1px 12px 2px #999;
+        }
+        &:hover i{
+            color: $maincolor;
+            font-size: 30px;
+        }
+    }
+}
+@media(max-width:991px) {
+    .about {
+        text-align: center;
+    }
+
+    h5 {
+        margin-top: 40px;
+    }
+}
+/* start my skills */
+.skills {
+    background-color: #f5f5f5;
+    padding: 80px 0 60px;
+    h2 {
+        text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        -webkit-text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        margin:0 auto  60px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid $maincolor;
+        width: 150px;
+       }
+    .skill{
+        margin-bottom: 20px;
+        label{
+            font-weight: bolder;
+        }
+        .progress-bar{
+            background-color: $maincolor;
+            border-radius: 8px;
+        }
+    }
+}
+
+ /*start services */
+ .services {
+     padding: 80px 0;
+     background-color: #fff;
+     h2 {
+        text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        -webkit-text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        margin:0 auto  60px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid $maincolor;
+        width: 180px;
+       }
+       .service {
+           padding: 20px 10px;
+           margin: 30px 0;
+           border:1px solid #ddd7d7;
+           transition: all .9s ease-in-out;
+           h3 {
+               font-size: 20px;
+               font-weight: bolder;
+           }
+           i{
+               font-size: 45px;
+               border: 3px dotted $maincolor;
+               width: 100px;
+               height: 100px;
+               line-height: 100px;
+               margin-bottom: 30px;
+               border-radius: 50px;
+               color: $maincolor;
+               transition: all .9s ease-in-out;
+           }
+           p {
+            transition: all .9s ease-in-out;
+           }
+           &:hover {
+            background-color: $maincolor;
+            box-shadow: -1px -1px 30px 5px $maincolor;
+            border-radius: 10px;
+           }
+           &:hover i {
+               color: #fff;
+               border: 3px dotted #fff;
+           }
+           &:hover p {
+               color:#fff;
+           }
+       }
+ }
+
+ /* start my work */
+ .work {
+     padding: 80px 0;
+     background-color: #f5f5f5;
+     h2 {
+        text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        -webkit-text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        margin:0 auto  60px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid $maincolor;
+        width: 140px;
+       }
+       .control{
+            margin:0 auto 50px;
+        ul{  
+          li{
+              display: inline-block;
+              button{
+                 background-color: transparent;
+                 border: none;
+                 outline: none;
+                 padding:10px 11px;
+                 margin-right: 15px;
+                 text-transform: capitalize;
+                 cursor: pointer;
+                 border-bottom: 2px solid $maincolor;
+                 transition: all .9s ease-in-out;
+                &:hover {
+                    background-color: $maincolor;
+                    color:#fff;
+                }
+                &.active{
+                    background-color: $maincolor;
+                    color: #fff;
+                } 
+             }
+          }
+        }  
+       }
+       .card {
+           margin-bottom: 40px;
+           position: relative;
+           transition: all .7s ease-out;
+           overflow: hidden;
+           position: relative;
+           i {
+               position: absolute;
+               left: 40%;
+               top: -40%;
+               font-size: 25px;
+               height: 60px;
+               width: 60px;
+               line-height: 60px;
+               border: 2px solid $maincolor;
+               border-radius: 50px;
+               background-color: $maincolor;
+               color: #fff;
+               transition-delay:1s;
+               transition: all .7s ease-out;
+               z-index: -2;
+           }
+           &:hover {
+                background-color: $maincolor;
+                color: #fff;
+           }
+           &:hover i {
+                top: 30%;
+                z-index: 1;
+            }
+            &:hover .overr {
+                position: absolute;
+                transition: all .4s ease-out;
+                width: 100%;
+                height: 75%;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, .8)
+               }
+            p {
+                font-weight: bolder;
+            }
+        }
+ }
+
+ /* start contact */
+ .contact {
+    padding: 80px 0;
+   
+    h2 {
+        text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        -webkit-text-shadow: 3px 3px 6px  rgba(0, 0, 0, .5);
+        margin:0 auto  40px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid $maincolor;
+        width: 100px;
+       }
+       p {
+           font-size: 22px;
+           color: #aca3a3
+       }
+       ul {
+           li {
+               display: inline-block;
+               a {
+                   display: block;
+                   font-size: 25px;
+                   color: $maincolor;
+                   border: 2px solid $maincolor;
+                   width: 50px;
+                   height: 50px;
+                   line-height: 50px;
+                   margin: 0 7px;
+                   border-radius: 50%;
+                   transition: all .9s ease-in-out;
+                   &:hover {
+                       background-color: $maincolor;
+                       color: #fff;
+                   }
+               }
+           }
+       }
+ }
+
+ /* start footer */
+ footer{
+     background-color: #f5f5f5;
+     color: #999;
+     p {
+        margin: 0;
+        font-size: 18px;
+        span{
+            color: $maincolor;
+         }
+     }  
+ }
+
+ /* start scroll top */
+ .scroll{
+     width:30px;
+     height: 30px;
+     line-height: 30px;
+     text-align: center;
+     color: $maincolor;
+     position: fixed;
+     right:5px;
+     bottom: 0px;
+     font-size: 25px;
+     border: 1px solid $maincolor;
+     &:hover{
+         background-color: $maincolor;
+         color: #fff;
+     }
+ }
+ 
+ /* load screen */
+ .load{
+     position: fixed;
+     background-color: #000;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     z-index: 9999;
+     .spinner {
+        margin: 30% auto;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        text-align: center;
+        
+        -webkit-animation: sk-rotate 2.0s infinite linear;
+        animation: sk-rotate 2.0s infinite linear;
+      }
+      
+      .dot1, .dot2 {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background-color: #fff;
+        border-radius: 100%;
+        -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+        animation: sk-bounce 2.0s infinite ease-in-out;
+      }
+      
+      .dot2 {
+        top: auto;
+        bottom: 0;
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+      }
+      
+      @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+      @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+      
+      @-webkit-keyframes sk-bounce {
+        0%, 100% { -webkit-transform: scale(0.0) }
+        50% { -webkit-transform: scale(1.0) }
+      }
+      
+      @keyframes sk-bounce {
+        0%, 100% { 
+          transform: scale(0.0);
+          -webkit-transform: scale(0.0);
+        } 50% { 
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+      }
+      h1{
+          color: white;
+          margin: 30% auto;
+          text-align: center;
+      }
+ }
